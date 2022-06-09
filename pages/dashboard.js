@@ -38,7 +38,6 @@ export async function getServerSideProps(context) {
 	user = JSON.parse(JSON.stringify(user));
 
 	let jobs = await getJobsPosted(user.id, prisma);
-    console.log(jobs)
 	jobs = JSON.parse(JSON.stringify(jobs));
 
 	return {
